@@ -4,12 +4,13 @@
   "description": "Este é um projecto feito durante o curso NLW(Next Level Week) da RocketSeat, que foi ministrado em uma semana e de forma bem dada e explicada pelo Professor Mayko Brito!!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "Adilson Zumba Manuel",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
