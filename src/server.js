@@ -7,20 +7,26 @@ server.use(express.static("public"))
 
 //Utilizando template engine
 const nunjucks = require("nunjucks")
+nunjucks.configure("src/views",{
+
+    express: server,
+    noCache: true
+
+})
 
 //Configurar caminhos da minha aplicação
 //Página inicial
 //res-> response - req->request
 server.get("/", (req,res) =>{
-    res.sendFile(__dirname + "/views/index.html")
+    res.render("/index.html")
 })
 
 server.get("/create-point", (req,res) =>{
-    res.sendFile(__dirname + "/views/create-point.html")
+    res.render("create-point.html")
 })
 
 server.get("/search.results", (req,res) =>{
-    res.sendFile(__dirname + "/views/search.results.html")
+    res.render("search.results.html")
 })
 
 //Ligar o servidor
