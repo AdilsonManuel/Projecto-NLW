@@ -2,12 +2,13 @@
 {% set pageID = 'page-create-point' %}
 
 {% block title %}
-<title>Criar um ponto de coleta</title>
+    <title>Criar um ponto de coleta</title>
 {% endblock title %}
 
 
 {% block styles %}
-<link rel="stylesheet" href="sytles/create-point.css">
+    <link rel="stylesheet" href="sytles/create-point.css">
+    <link rel="stylesheet" href="sytles/modal.css">
 {% endblock styles %}
 
 {% block content %}
@@ -35,7 +36,6 @@
             </div>
         </div>
  
-
         <div class="fieldGroup">
             <div class="field">
                 <label for="address">Endereco</label><input type="text" name="address" required>
@@ -106,8 +106,15 @@
     </fieldset>
     <button type="submit">Cadastrar ponto de coleta</button>
 </form>
+
 {% endblock content %}
 
+{% block modal %}
+        {% if saved %}
+            {% include "partials/point-created.html"%}}
+    {% endif %}
+{% endblock modal %}
+
 {% block scripts %}
-<script src="js/create-point.js"></script>
+    <script src="js/create-point.js"></script>
 {% endblock scripts %}
