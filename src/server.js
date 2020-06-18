@@ -22,7 +22,15 @@ server.get("/", (req, res) => {
 })
 
 server.get("/create-point", (req, res) => {
+
   return res.render("create-point.html")
+})
+
+server.post("/savepoint",(req,res) =>{
+     
+    //req.body: o corpo do nosso formulário
+    console.log(req.query)
+     return res.send("Teste")
 })
 
 server.get("/search", (req, res) => {

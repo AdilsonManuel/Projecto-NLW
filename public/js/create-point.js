@@ -58,7 +58,7 @@ function handleSelectedItem(evt) {
 
     itemLi.classList.toggle("selected");
 
-    const itemID = evt.target.dataset.id;
+    const itemID = itemLi.dataset.id;
 
     //Verify if exist items and which are selected and return true or false
     const alreadySelected = selectedItems.findIndex(item => {
