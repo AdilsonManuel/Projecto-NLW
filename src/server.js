@@ -18,15 +18,15 @@ nunjucks.configure("src/views",{
 //Página inicial
 //res-> response - req->request
 server.get("/", (req,res) =>{
-    res.render("/index.html")
+   return res.render("index.html",{title: "Um titulo"})
 })
 
 server.get("/create-point", (req,res) =>{
-    res.render("create-point.html")
+    return res.render("create-point.html")
 })
 
-server.get("/search.results", (req,res) =>{
-    res.render("search.results.html")
+server.get("/search", (req,res) =>{
+    return res.render("search-results.html")
 })
 
 //Ligar o servidor
